@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="nav__inner">
         {/* Left: Logo */}
         <Link className="nav__logo" to="/" aria-label="Logo">
-          <img src="/logo.png" alt="Shubham Saraf Logo" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Shubham Saraf Logo" />
         </Link>
 
         {/* Center: Links */}

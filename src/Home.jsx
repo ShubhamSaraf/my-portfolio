@@ -67,9 +67,10 @@ export default function App() {
             </h2>
 
             <p className="hero-desc">
-              Hi, I’m a Full Stack Developer, passionate about creating sleek,
-              modern web applications using React, Tailwind, and the power of
-              Java on the backend.
+              Hi, I’m an AI & Machine Learning Engineer passionate about building 
+              intelligent, scalable systems. Alongside my ML work, I design and 
+              develop modern web applications end-to-end, with strong understanding 
+              of the technologies used to build and deploy products like this website.
             </p>
 
             <div className="hero-actions">
@@ -80,8 +81,7 @@ export default function App() {
 
           <div className="hero-right">
             <div className="avatar-glow breathe">
-              <img src="/profile.jpg" alt="Profile" />
-              {/* replace vite.svg with your photo later */}
+              <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Profile" />
             </div>
           </div>
         </section>
