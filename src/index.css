@@ -425,6 +425,10 @@ html, body {
   color: inherit;
 }
 
+.contact-response {
+  display: none;
+}
+
 .about-page {
   max-width: 1100px;
   margin: 0 auto;
