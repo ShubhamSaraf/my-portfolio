@@ -1,4 +1,4 @@
-const CONTACT_EMAIL = "contact@shubhamsaraf.com";
+const CONTACT_EMAIL = "contact@shubhamsaraf.dev";
 
 const Contact = () => {
   const handleSubmit = (event) => {
