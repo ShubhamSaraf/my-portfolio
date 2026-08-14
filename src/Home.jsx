@@ -1,4 +1,18 @@
 import { useEffect, useState } from "react";
+import About from "./About";
+
+const TYPING_WORDS = [
+  "TensorFlow",
+  "PyTorch",
+  "Deep Learning",
+  "OpenCV",
+  "Python",
+  "Docker",
+  "End-to-End ML Systems",
+  "Model Deployment",
+  "Java",
+  "Javascript",
+];
 
 function TypingText({ words, speed = 100, pause = 2000 }) {
   const [wordIndex, setWordIndex] = useState(0);
@@ -54,16 +68,7 @@ export default function App() {
 
             <h2 className="hero-subtitle">
                 AI/ML Engineer{" "}
-                <TypingText words={[
-                  "TensorFlow", 
-                  "PyTorch", 
-                  "Deep Learning", 
-                  "OpenCV", "Python", 
-                  "Docker", 
-                  "End-to-End ML Systems", 
-                  "Model Deployment", 
-                  "Java", 
-                  "Javascript"]} pause={2000} />
+                <TypingText words={TYPING_WORDS} pause={2000} />
             </h2>
 
             <p className="hero-desc">
@@ -81,43 +86,18 @@ export default function App() {
 
           <div className="hero-right">
             <div className="avatar-glow breathe">
-              <img src={`${import.meta.env.BASE_URL}profile.jpg`} alt="Profile" />
+              <img
+                src={`${import.meta.env.BASE_URL}profile.jpg`}
+                alt="Profile"
+                width="1000"
+                height="1000"
+                decoding="async"
+                fetchPriority="high"
+              />
             </div>
           </div>
         </section>
-        {/* ABOUT SECTION */}
-        <section id="about" className="about">
-          <h2 className="section-title">About Me</h2>
-
-          <div className="about-card">
-            <p className="about-text">
-              I’m <b>Shubham Saraf</b>, a passionate <span className="hl">AI & ML Engineer</span> with a strong interest 
-              in computer vision and deep learning. I enjoy building intelligent systems that can learn from complex 
-              visual and numerical data and translate research ideas into practical, real-world applications.
-            </p>
-
-            <p className="about-text">
-              I hold a <b>Master’s degree in Computer Science</b> and have experience working on research-driven machine learning 
-              projects, including deep learning models built on large-scale datasets and satellite imagery. My work 
-              emphasizes robust model design, interpretability, and performance, and I’m especially drawn to problems 
-              where AI can make systems more efficient and reliable.
-            </p>
-
-            <p className="about-text">
-              Beyond research, I enjoy exploring diverse areas of AI through hands-on projects and value clean design, 
-              thoughtful engineering, and end-to-end system thinking. I’m motivated by curiosity, continuous learning, and 
-              collaboration in building meaningful technology.
-            </p>
-
-            <ul className="about-list">
-              <li>Machine Learning & Deep Learning</li>
-              <li>Computer Vision & image-based modeling</li>
-              <li>End-to-end ML pipelines (training → evaluation → deployment)</li>
-              <li>Model optimization, performance, and reliability</li>
-              <li>Performance-focused ML solutions</li>
-            </ul>
-          </div>
-        </section>
+        <About />
     </>
   );
 }

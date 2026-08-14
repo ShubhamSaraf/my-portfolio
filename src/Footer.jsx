@@ -72,11 +72,12 @@ export default function Footer() {
             title="GitHub"
             >
             <img
-                src={`${import.meta.env.BASE_URL}${theme === "light"
-                ? "GitHub_Black.png"
-                : "GitHub_White.png"
-                }`}
+                src={ghIcon}
                 alt="GitHub"
+                width="18"
+                height="18"
+                loading="lazy"
+                decoding="async"
             />
             </a>
             <a href="mailto:contact@shubhamsaraf.dev">✉</a>

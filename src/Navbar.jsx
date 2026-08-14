@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-{/*const links = ["Home", "About", "Projects", "Contact"];*/}
 const links = ["Home", "About", "Contact"];
 
 
@@ -16,12 +15,16 @@ export default function Navbar() {
   return (
     <header className="nav">
       <div className="nav__inner">
-        {/* Left: Logo */}
         <Link className="nav__logo" to="/" aria-label="Logo">
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Shubham Saraf Logo" />
+          <img
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt="Shubham Saraf Logo"
+            width="128"
+            height="128"
+            decoding="async"
+          />
         </Link>
 
-        {/* Center: Links */}
         <nav className="nav__links" aria-label="Primary">
           {links.map((label) => {
             const to = 
@@ -44,7 +47,6 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Right: Theme toggle */}
         <button
           className="nav__themeBtn"
           onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
