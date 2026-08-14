@@ -79,7 +79,7 @@ export default function Footer() {
                 alt="GitHub"
             />
             </a>
-            <a href="mailto:contact@shubhamsaraf.dev">✉</a>
+            <a href="mailto:contact@shubhamsaraf.com">✉</a>
           </div>
           <p className="footer-text small">
             Lincoln, Nebraska<br />
